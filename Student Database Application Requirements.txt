@@ -1,0 +1,62 @@
+Student Database Application
+
+Scenario: You are a DBA for a university and need to create an application to manage student enrollments and balance.
+
+Your application should do the following:
+	Ask the user how many new students will be added to the database
+	The user should be prompted to enter the name and year for each student
+	The student should have a 5-digit unique ID, with the first number being their grade level
+	A student can enroll in the following courses:
+		History101
+		Mathematics101
+		English101
+		Chemistry101
+		ComputerScience101
+	Each course cost $600 to enroll
+	The student should be able to view their balance and pay the tuition
+	To see the status of the student, we should see their name, ID, courses enrolled, and balance.
+	
+_____________________________________________________________________________________________________________________
+
+Classes
+
+	Student
+		ID - Grade Level + 4 digits (if grade level.length = 2 + 3 digits)
+		Name - String
+		Year - String FROSH, SOPH, JR, SR
+		Grade Level - 1-12
+		Courses Enrolled
+		Courses Paid
+		Tuition - Courses enrolled * 600
+		Balance - Tuition - Paid Course
+
+	Course
+		Name
+		Cost - 600
+		
+	Left Over
+		
+	
+	
+	University (Possibly)
+		
+		
+		
+	switch (course) {
+                case "History 101", "Mathematics 101", "English 101", "Chemistry 101", "Computer Science 101":
+                    if (courses == null) {
+                        courses = "";
+                    }
+                    courses += courses + "\n" + course;
+                    tuitionBalance = tuitionBalance + costOfCourse;
+                    break;
+
+
+                case "Q":
+
+                    if (courses == null) {
+                        System.out.println("You have not enrolled in any course");
+                        System.exit(1);
+                    }
+
+            }
